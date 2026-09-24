@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Transitions and Animations</title>
+
+    <style>
+
+        /* ---------- General ---------- */
+
+        body
+        {
+            background-color: #0f0f17;
+            font-family: Arial, sans-serif;
+        }
+
+        p
+        {
+            font-size: 20px;
+            color: #f5f3ff;
+        }
+
+
+        /* ---------- Main Box ---------- */
+
+        .mainbox
+        {
+            padding: 15px 10px;
+            border: 1px solid #5b4b8a;
+            border-radius: 12px;
+
+            display: flex;
+            flex-direction: row;
+
+            background-color: #1e1b2e;
+
+            transition: 0.5s;
+        }
+
+        .mainbox:hover
+        {
+            background-color: #28213d;
+        }
+
+
+        /* ---------- Text Section ---------- */
+
+        .sub1
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-left: 10px;
+        }
+
+
+        /* ---------- Image & Button Section ---------- */
+
+        .sub2
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 150px;
+        }
+
+
+        /* ---------- Image ---------- */
+
+        .image-container
+        {
+            position: relative;
+
+            width: 50px;
+            height: 50px;
+
+            margin-bottom: 20px;
+        }
+
+        .img,
+        .gif
+        {
+            width: 50px;
+            height: 50px;
+
+            border-radius: 10px;
+        }
+
+        .img
+        {
+            display: block;
+        }
+
+        .gif
+        {
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            opacity: 0;
+
+            transition: opacity 0.3s;
+        }
+
+        .image-container:hover .gif
+        {
+            opacity: 1;
+        }
+
+
+        /* ---------- Button ---------- */
+
+        .click
+        {
+            padding: 10px 15px;
+
+            border: 1px solid #9b85ff;
+            border-radius: 10px;
+
+            background-color: #7c5cff;
+            color: white;
+
+            cursor: pointer;
+
+            transition: 0.5s;
+        }
+
+        .click:hover
+        {
+            background-color: #00c2ff;
+        }
+
+        .click:active
+        {
+            background-color: #6c4cff;
+            opacity: 0.6;
+
+            transition: 0.1s;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="mainbox">
+
+        <div class="sub1">
+            <p>If you like pizza</p>
+        </div>
+
+        <div class="sub2">
+
+            <div class="image-container">
+
+                <img
+                    class="img"
+                    src="pizza1.jpg"
+                    alt="Pizza"
+                >
+
+                <img
+                    class="gif"
+                    src="gojo.gif"
+                    alt="Gojo GIF"
+                >
+
+            </div>
+
+            <button class="click">
+                Click Me
+            </button>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
